@@ -2,7 +2,7 @@
 
 namespace RealUnrealRPG.Classes
 {
-    internal class Player : IPlayer
+    internal class Player : Character, IPlayer
     {
         //CLASS VARIABLES
         public string PlayerName = "";
