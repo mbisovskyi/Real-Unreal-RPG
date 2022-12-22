@@ -8,6 +8,7 @@ namespace RealUnrealRPG.Classes
 {
     internal class Dwarf : Race
     {
+        //CONSTRUCTOR
         public Dwarf()
         {
             Name = "Dwarf";

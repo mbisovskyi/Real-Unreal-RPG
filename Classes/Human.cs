@@ -3,6 +3,7 @@ namespace RealUnrealRPG.Classes
 {
     internal class Human : Race
     {
+        //CONSTRUCTOR
         public Human()
         {
             Name = "Human";

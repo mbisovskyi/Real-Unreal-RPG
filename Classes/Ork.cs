@@ -2,6 +2,7 @@
 {
     internal class Ork : Race
     {
+        //CONSTRUCTOR
         public Ork()
         {
             Name = "Ork";

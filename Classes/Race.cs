@@ -1,11 +1,12 @@
 ﻿namespace RealUnrealRPG.Classes
 {
-    internal class Race
+    abstract class Race
     {
-        public string Name = "";
-        public byte Strength;
-        public byte Accuracy;
-        public byte Agility;
-        public byte Power;
+        //CLASS VARIABLES
+        internal string Name = "";
+        internal byte Strength;
+        internal byte Accuracy;
+        internal byte Agility;
+        internal byte Power;
     }
 }

@@ -2,11 +2,12 @@
 
 namespace RealUnrealRPG.Classes
 {
-    internal class Player : Character, IPlayer
+    internal class Player : IPlayer
     {
         //CLASS VARIABLES
-        public string PlayerName = "";
+        internal string PlayerName = "";
         private bool KeepPlayerName = false;
+        private Character character = new();
 
         //CONSTRUCTOR
         public Player()
@@ -16,7 +17,6 @@ namespace RealUnrealRPG.Classes
                 GetPlayerName();
                 DoesUserKeepName();
             }
-            Console.WriteLine($"Player name is \"{PlayerName}\"");
         }
 
         //CLASS METHODS
@@ -88,6 +88,32 @@ namespace RealUnrealRPG.Classes
             {
                 KeepPlayerName = false;
             }
+        }
+
+        //Prints out character's information to the console.
+        public void PrintCharInformation()
+        {
+            Dictionary<string, byte> charRaceDictionary = new Dictionary<string, byte>()
+            {
+                { "Strength", character.race.Strength},
+                { "Accuracy", character.race.Accuracy},
+                { "Agility", character.race.Agility},
+                { "Power", character.race.Power},
+            };
+            Console.WriteLine("\nCharacter information: ");
+            Console.WriteLine($"Name: {PlayerName}");
+            Console.WriteLine($"Race: {character.race.Name}");
+            foreach (KeyValuePair<string, byte> attribute in charRaceDictionary)
+            {
+                Console.WriteLine(attribute);
+            }
+            Console.WriteLine();
+        }
+
+        //Allows for player to create a character.
+        public void CreateCharacter()
+        {
+            character.SelectRace();
         }
     }
 }
